@@ -119,9 +119,9 @@ var _ = BeforeSuite(func(done Done) {
 	Expect(err).ToNot(HaveOccurred(), "failed to setup GitRepositoryReconciler")
 
 	err = (&HelmRepositoryReconciler{
-		Client:  k8sManager.GetClient(),
-		Scheme:  scheme.Scheme,
-		Storage: ginkgoTestStorage,
+		Client:        k8sManager.GetClient(),
+		EventRecorder: record.NewFakeRecorder(32),
+		Storage:       ginkgoTestStorage,
 		Getters: getter.Providers{getter.Provider{
 			Schemes: []string{"http", "https"},
 			New:     getter.NewHTTPGetter,
