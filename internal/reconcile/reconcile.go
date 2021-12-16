@@ -23,13 +23,10 @@ import (
 	kuberecorder "k8s.io/client-go/tools/record"
 	ctrl "sigs.k8s.io/controller-runtime"
 
-<<<<<<< HEAD
 	"github.com/fluxcd/pkg/apis/meta"
 	"github.com/fluxcd/pkg/runtime/conditions"
 	"github.com/fluxcd/pkg/runtime/patch"
 
-=======
->>>>>>> f0de54e (Add internal packages error and result)
 	sourcev1 "github.com/fluxcd/source-controller/api/v1beta1"
 	serror "github.com/fluxcd/source-controller/internal/error"
 )
